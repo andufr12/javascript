@@ -1,5 +1,5 @@
 let list = ``
-let num = 12;
+let num = prompt("!값을 입력하지 마세요");
 
 list += `<table class="a">`;
 list += `<tr><th>증감연산자</th><th>설명</th>예) let num = 12 <th>예)let num = 12</th>  <th>순서</th></tr>`;
