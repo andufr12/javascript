@@ -5,6 +5,16 @@ body{
     width: 100%;
     
 }
+
+table{
+  position: absolute;
+  top: 50%;
+  max-width: 900px;
+  min-width: 700px;
+  width: 90%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 table th{
   background:rgb(97, 197, 164) ;
   color:black;
