@@ -1,0 +1,20 @@
+let list = ``
+let num = 12;
+
+list += `<table class="a">`;
+list += `<tr><th>증감연산자</th><th>설명</th>예) let num = 12 <th>예)let num = 12</th>  <th>순서</th></tr>`;
+list += `<tr><td>변수++</td><td>기존의 변수 값에 1을 더합니다(후위).</td><td>console.log(num++) 답:${num++} </td><td>1</td></tr>`;
+list += `<tr><td>++변수</td><td>기존의 변수 값에 1을 더합니다(전위).</td><td>console.log(++num) 답:${++num} </td><td>2</td></tr>`;
+list += `<tr><td>변수--</td><td>기존의 변수 값에 1을 뺍니다.(후위).</td><td>console.log(num--) 답:${num--} </td><td>3</td></tr>`;
+list += `<tr><td>--변수</td><td>기존의 변수 값에 1을 뺍니다.(후위).</td><td>console.log(--num) 답:${--num} </td><td>4</td></tr>`;
+list += `</table>`;
+
+document.write(list)
+
+
+// let num = prompt()
+
+// console.log(`num++은 ${num++}`);
+// console.log(`++num 은 ${++num}`);
+// console.log(`num-- 은 ${num--}`);
+// console.log(`--num 은 ${--num}`)
