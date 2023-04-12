@@ -1,7 +1,7 @@
-var a1 = 1;
-var a2 = 2;
-console.log("안녕하세요. 반가워요");
-console.log(a1 + a2);
+let a =3
 
-var input = confirm("당신은 남자 입니까?")
-console.log(input)
+if(a>3){
+    console.log(`${a}는(은) 3보다 큽니다!`)
+} else {
+    console.log(`${a}는(은) 3보다 작거나 같습니다.!`)
+}
