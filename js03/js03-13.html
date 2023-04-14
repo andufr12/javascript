@@ -13,18 +13,19 @@
         }
       }
 
-      h1{
-        color:white;
+      h1 {
+        color: white;
         text-align: center;
       }
 
       body {
         background-color: black;
+        animation: appear 1s ease-in-out;
       }
       tr td {
         text-align: center;
         border: 1px solid black;
-        padding:10px;
+        padding: 10px;
       }
 
       td:nth-child(1) {
@@ -54,7 +55,11 @@
     <script>
       // 분리할 금액을 입력 받는다.
       let price = prompt("거스름돈으로 계산할 금액을 넣어주세요."); // 분리할 돈
-        document.write(`<h1>입력하신 <mark>${price||0}원</mark> 을 거스름돈으로 분리하면</h1><hr>`)
+      document.write(
+        `<h1>입력하신 <mark>${
+          price || 0
+        }원</mark> 을 거스름돈으로 분리하면</h1><hr>`
+      );
       //   분리된 금액에 대한 갯수를 저장하는 장소를 만든다.
       let 오만원 = 0;
       let 만원 = 0;
