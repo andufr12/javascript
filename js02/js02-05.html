@@ -19,7 +19,8 @@
       body {
         color: white;
         animation: 1s appear ease-in-out;
-        background: rgb(6, 151, 54);
+        background-image: url('../img/pool.jpg');
+        
       }
 
       h1 {
@@ -29,21 +30,22 @@
       div {
         color: rgb(255, 255, 255);
         position: fixed;
-        background: rgba(255, 255, 255, 0.148);
+        background: rgba(0, 0, 0, 0.151);
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         border-radius: 50%;
         padding: 80px;
-        box-shadow: 25px 25px 8px 2px rgb(0, 0, 0) inset,
-          25px 25px 8px 2px rgba(0, 0, 0, 0.699);
-        transition: 1s;
+        box-shadow:  -5px -5px 5px 0 black,40px 40px 8px 2px rgba(0, 0, 0, 0.945) inset,
+          40px 40px 8px 2px rgba(0, 0, 0, 0.699);
+        transition: 2s;
       }
 
       div:hover {
-        box-shadow: 0 0 0 0 inset transparent, 0 0 0 0 transparent;
+        box-shadow: 0 0 0 0 black, 0 0 0 0 inset black, 0 0 0 0 black;
         transform: translate(-55%, -55%);
-        background: rgb(6, 151, 54);
+        background:transparent;
+        cursor: pointer;
       }
       p {
         font-size: 17px;
