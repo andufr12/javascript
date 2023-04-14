@@ -5,6 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>스위치 조건문2(응용)</title>
+    <style>
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transform: translateY(-100px);
+        }
+      }
+
+      h1{
+        color:greenyellow
+      }
+      body {
+        animation: 1s appear ease-in-out;
+        background-color: black;
+        color:white;
+        
+      }
+      pre{
+        line-height: 2;
+        font-size: 15px;
+      }
+
+    </style>
     <script>
       const str = prompt("과일명을 입력하세요.");
       switch (str) {
@@ -31,6 +54,11 @@
     </script>
   </head>
   <body>
+    <p>
+      <a style="text-decoration: none; color: white" href="./js03-00.html"
+        >목차로 돌아가기</a
+      >
+    </p>
     <hr />
     <pre>
         <h3>소스코드</h3>

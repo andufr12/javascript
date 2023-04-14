@@ -1,7 +1,7 @@
 let list = ""
 let num = prompt("!(값을 입력하지 마세요)");
 
-list = `<h1 style="color:white;">증감연산자 문제</h1>`
+list = ``
 list += `<h1 style="color:white;">증감연산자 문제</h1>`
 list += `<hr/>`
 list += `<table class="a">`;
