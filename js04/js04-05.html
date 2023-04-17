@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제1) 다음 중 제거하고 싶은 품목을 입력하세요.</title>
+    <style>
+      body {
+        color: white;
+        background-image: url('.././img/fruits.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      span {
+        color: gold;
+      }
+
+      h1 {
+        padding: 5px;
+        background-color: grey;
+        border-radius: 5px;
+        position: absolute;
+        text-align: center;
+        width: 450px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        line-height: 50px;
+      }
+
+      span {
+        position: relative;
+        border-color: transparent;
+      }
+
+      span::before {
+        content: "";
+        bottom: 0rem;
+        position: absolute;
+        border-bottom: 2px dashed gold;
+        width: 0px;
+        transition: 1s;
+      }
+
+      span:hover {
+        cursor: pointer;
+      }
+
+      span:hover::before {
+        width: 280px;
+      }
+    </style>
+    <script>
+      /** 1. 다음 중 제거하고 싶은 품목을 입력하세요.
+     * [
+        "수박",
+        "키위",
+        "딸기",
+        "파인애플",
+        "복숭아",
+        "포도",
+        "오렌지",
+        "한라봉",
+      ];
+     *  ex) prompt 에 '배'라고 입력 
+     */
+
+      const 과일 = ["수박", "키위", "배", "오렌지", "사과"];
+      const 제거하고싶은과일 = prompt(
+        `1. 다음 중 제거하고 싶은 품목을 입력하세요.\n ["수박","키위","배","오렌지","사과"]`
+      );
+      const 제거하고싶은과일위치 = 과일.indexOf(제거하고싶은과일);
+      과일.splice(제거하고싶은과일위치, 1);
+      document.write(
+        `<h1>말씀하신 품목을 제거한 결과는 "<span>${과일}</span>" 입니다.</h1> `
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
