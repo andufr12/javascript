@@ -8,7 +8,7 @@
     <style>
       body {
         color: white;
-        background-image: url('.././img/fruits.png');
+        background-image: url(".././img/fruits.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -53,6 +53,17 @@
       }
     </style>
     <script>
+      // 특정 위치에 요소 추가하기
+      const 과일 = ["수박", "키위", "배", "오렌지", "사과"];
+
+      const 추가하고싶은과일 = prompt(
+        `${과일} 외에 추가하고 싶은 과일을 입력하세요.`
+      );
+
+      과일.splice(과일.length, 1, 추가하고싶은과일);
+      console.log(과일);
+
+      //-------------------------------------------------------------------------
       /** 1. 다음 중 제거하고 싶은 품목을 입력하세요.
      * [
         "수박",
@@ -67,15 +78,17 @@
      *  ex) prompt 에 '배'라고 입력 
      */
 
-      const 과일 = ["수박", "키위", "배", "오렌지", "사과"];
-      const 제거하고싶은과일 = prompt(
-        `1. 다음 중 제거하고 싶은 품목을 입력하세요.\n ["수박","키위","배","오렌지","사과"]`
-      );
-      const 제거하고싶은과일위치 = 과일.indexOf(제거하고싶은과일);
-      과일.splice(제거하고싶은과일위치, 1);
-      document.write(
-        `<h1>말씀하신 품목을 제거한 결과는 "<span>${과일}</span>" 입니다.</h1> `
-      );
+      //  const 과일 = ["수박", "키위", "배", "오렌지", "사과"];
+
+      // const 제거하고싶은과일 = prompt(
+      //   `1. 다음 중 제거하고 싶은 품목을 입력하세요.\n ["수박","키위","배","오렌지","사과"]`
+      // );
+
+      // const 제거하고싶은과일위치 = 과일.indexOf(제거하고싶은과일);
+      // 과일.splice(제거하고싶은과일위치, 1);
+      // document.write(
+      //   `<h1>말씀하신 품목을 제거한 결과는 "<span>${과일}</span>" 입니다.</h1> `
+      // );
     </script>
   </head>
   <body></body>
