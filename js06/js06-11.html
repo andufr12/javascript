@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      table {
+        border-collapse: collapse;
+        background-color: rgba(255, 255, 255, 0.733);
+        width: 100vw;
+        max-width: 1000px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.582);
+        text-align: center;
+      }
+      td {
+        border: 1px solid black;
+        padding: 10px;
+      }
+
+      .bora {
+        background-color: rgba(137, 43, 226, 0.788);
+      }
+
+      .blue {
+        background-color: powderblue;
+        background-image: url("../img/green.png");
+        background-image: url("../img/cherry.png");
+
+        background-image: url("../img/trees.png");
+        background-image: url("../img/pool.jpg");
+      }
+
+      .yellow {
+        background-color: yellow;
+      }
+
+      .beige {
+        background-color: bisque;
+      }
+
+      .red {
+        background-color: red;
+      }
+      h3 {
+        text-align: center;
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-shadow: 2px 5px 8px black;
+        background-color: rgba(0, 0, 0, 0.281);
+        border-radius: 5px;
+        color: white;
+        padding: 10px;
+      }
+
+      .back_image {
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+
+    <script>
+      const input = 22;
+      const temp = [" ", " ", " ", " ", " "];
+      let index = 0;
+      const message = [
+        `지금온도는 ${temp[0]}이며, 상태는 매우 더워요.`,
+        `지금온도는 ${temp[1]}이며, 상태는 조금 더워요`,
+        `지금온도는 ${temp[2]}이며, 상태는 보통이에요`,
+        `지금온도는 ${temp[3]}이며, 상태는 포근한 날씨군요 `,
+        `지금온도는 ${temp[4]}이며, 상태는 쌀쌀한 날씨네요`,
+      ];
+
+      if (input >= 32)
+        (temp[0] = "매워 더움"),
+          (index = 0),
+          document.write(
+            `<div class="back_image" style="background-image: url('../img/sun.png');" ></div>`
+          );
+      else if (input >= 28)
+        (temp[1] = "더움"),
+          (index = 1),
+          document.write(
+            `<div class="back_image" style="background-image: url('../img/pool.png');" ></div>`
+          );
+      else if (input >= 22)
+        (temp[2] = "보통"),
+          (index = 2),
+          document.write(
+            `<div class="back_image" style="background-image: url('../img/cherry.png');" ></div>`
+          );
+      else if (input >= 16)
+        (temp[3] = "포근한 날씨"),
+          (index = 3),
+          document.write(
+            `<div class="back_image" style="background-image: url('../img/trees.png');" ></div>`
+          );
+      else {
+        (temp[4] = "조금 쌀쌀"),
+          (index = 4),
+          document.write(
+            `<div class="back_image" style="background-image: url('../img/sun.png');" ></div>`
+          );
+      }
+
+      document.write(`
+    <table>
+    <tr>
+      <td colspan="6">16미만</td>
+      <td colspan="4">16이상~22미만</td>
+      <td colspan="4">22이상~28미만</td>
+      <td colspan="3">28이상~32미만</td>
+      <td colspan="6">32이상</td>
+    </tr>
+    <tr>
+      <td class="bora"></td>
+      <td class="bora"></td>
+      <td class="bora"></td>
+      <td class="bora"></td>
+      <td class="bora"></td>
+      <td class="bora"></td>
+
+      <td class="blue"></td>
+      <td class="blue"></td>
+      <td class="blue"></td>
+      <td class="blue"></td>
+
+      <td class="yellow"></td>
+      <td class="yellow"></td>
+      <td class="yellow"></td>
+      <td class="yellow"></td>
+
+      <td class="beige"></td>
+      <td class="beige"></td>
+      <td class="beige"></td>
+
+      <td class="red"></td>
+      <td class="red"></td>
+      <td class="red"></td>
+      <td class="red"></td>
+      <td class="red"></td>
+      <td class="red"></td>
+    </tr>
+
+    <tr>
+      <td colspan="6">${temp[0]}</td>
+      <td colspan="4">${temp[1]}</td>
+      <td colspan="4">${temp[2]}</td>
+      <td colspan="3">${temp[3]}</td>
+      <td colspan="6">${temp[4]}</td>
+    </tr>
+  
+  </table>
+  <h3>지금 온도는 ${input} 이구요. 상태는 ${message[index]} </h3>
+
+
+    `);
+    </script>
+  </head>
+  <body></body>
+</html>
