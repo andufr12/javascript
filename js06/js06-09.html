@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      body {
+        background: linear-gradient(-90deg, rgb(34, 21, 1), tomato);
+        text-align: center;
+      }
+
+      h1 {
+        padding: 20px;
+        box-shadow: 15px 30px 15px 5px rgba(0, 0, 0, 0.589);
+        background: linear-gradient(90deg, tomato, black);
+        font-size: 1.9rem;
+        color: white;
+        text-shadow: 8px 10px 5px black;
+      }
+
+      @keyframes updown {
+        from {
+          transform: translate(-50%, -43%);
+        }
+      }
+      table {
+        color: white;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 450px;
+        box-shadow: 15px 20px 5px rgba(0, 0, 0, 0.685);
+      }
+      td {
+        border: 1px solid rgb(255, 255, 255);
+        width: 200px;
+        padding: 5px;
+      }
+      th {
+        border: 1px solid rgb(255, 255, 255);
+        background-color: rgb(27, 29, 29);
+        padding: 6px;
+      }
+
+      .table_sum > td {
+        background: linear-gradient(60deg, rgb(0, 0, 0), rgb(20, 20, 20));
+      }
+    </style>
+  </head>
+  <body>
+    <h1>주사위를 1000000 번 던져서 n 이 나올 확률</h1>
+
+    <script>
+      let one = prompt(`1 에 고정값 줄거?(기본값:0)`, 0) * 1;
+      let two = prompt(`2 에 고정값 줄거?(기본값:0)`, 0) * 1;
+      let three = prompt(`3 에 고정값 줄거?(기본값:0)`, 0) * 1;
+      let four = prompt(`4 에 고정값 줄거?(기본값:0)`, 0) * 1;
+      let five = prompt(`5 에 고정값 줄거?(기본값:0)`, 0) * 1;
+      let six = prompt(`6 에 고정값 줄거?(기본값:0)`, 0) * 1;
+
+      let 고정값 = one + two + three + four + five + six;
+      let 백만 = 1000000;
+
+      for (let i = 0; i < 백만 - 고정값; i++) {
+        const random = Math.floor(Math.random() * 6) + 1;
+
+        if (random === 1) {
+          one++;
+        }
+
+        if (random === 2) {
+          two++;
+        }
+        if (random === 3) {
+          three++;
+        }
+        if (random === 4) {
+          four++;
+        }
+        if (random === 5) {
+          five++;
+        }
+        if (random === 6) {
+          six++;
+        }
+      }
+
+      // 확률 총 합계
+      const total = Math.round(
+        (one / 백만) * 100 +
+          (two / 백만) * 100 +
+          (three / 백만) * 100 +
+          (four / 백만) * 100 +
+          (five / 백만) * 100 +
+          (six / 백만) * 100
+      );
+
+      // 경우의 수 합계
+      const countSum = one + two + three + four + five + six;
+
+      document.write(
+        `<table>
+      <tr>
+        <th>주사위</th>
+        <th>경우의 수</th>
+        <th>나올 확률</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>${one}</td>
+        <td>${((one / 백만) * 100).toFixed(2)}%</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>${two}</td>
+        <td>${((two / 백만) * 100).toFixed(2)}%</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>${three}</td>
+        <td>${((three / 백만) * 100).toFixed(2)}%</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>${four}</td>
+        <td>${((four / 백만) * 100).toFixed(2)}%</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>${five}</td>
+        <td>${((five / 백만) * 100).toFixed(2)}%</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>${six}</td>
+        <td>${((six / 백만) * 100).toFixed(2)}%</td>
+      </tr>
+      <tr class="table_sum">
+        <td>합계</td>
+        <td>${countSum}</td>
+        <td>${total}%</td>
+        
+        </tr>
+    </table>`
+      );
+    </script>
+  </body>
+</html>
