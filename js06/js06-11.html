@@ -142,7 +142,9 @@
     </style>
 
     <script>
-      const input = prompt(`현재 온도를 입력해주세요.`);
+      const input = Number(
+        prompt(`현재 온도를 입력해주세요(기본값:0).`) && "0"
+      );
 
       // 온도 관련 메시지 배열
       const temp = [" ", " ", " ", " ", " "];
