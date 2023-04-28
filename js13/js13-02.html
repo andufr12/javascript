@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      pre{
+        line-height: 3;
+      }
+    </style>
     <script>
 
         // 나머지 매개변수는 매개변수의 마지막 자리에 와야 한다.
@@ -18,5 +23,19 @@
       sample(1, 2, 3, 4, 5);
     </script>
   </head>
-  <body></body>
+  <body>
+      <pre>
+
+        // 나머지 매개변수는 매개변수의 마지막 자리에 와야 한다.
+        function sample(a, b, ...c) {
+          console.log(a, b, c);
+        }
+  
+        sample(1, 2);
+        sample(1, 2, 3);
+        sample(1, 2, 3, 4);
+        sample(1, 2, 3, 4, 5);
+      </pre>
+
+  </body>
 </html>
