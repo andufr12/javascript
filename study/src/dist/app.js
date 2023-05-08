@@ -1,7 +1,7 @@
-"use strict";
 
-let numbers = [273, 52, 103, 32, 57];
-numbers = numbers.map((value) => {
-    return value * value;
-});
-console.log(numbers);
+// 200 개의 요소를 가진 배열을 생성하여  인덱스 0 부터 77 까지는 1부터 1씩 증가하도록 하고,
+// 인덱스 78 부터 166까지는 2씩 증가하도록 하며 167 부터 끝까지는 1 씩 감소하도록 하라.
+
+
+// 200 개의 요소를 가진 배열을 생성
+

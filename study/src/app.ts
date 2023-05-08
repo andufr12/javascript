@@ -1,10 +1,9 @@
 
 
-let numbers = [273, 52, 103, 32, 57];
 
 
-numbers= numbers.map((value)=>{
-    return value * value
-})
+function fun<T> (a:T,b:T):T {
+    return a
+}
 
-console.log(numbers)
+fun<number>(5,3)
